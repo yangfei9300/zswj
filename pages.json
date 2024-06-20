@@ -1,0 +1,247 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages/index2/index2",
+			"style" : 
+			{
+				"navigationBarTitleText" : "找商机",
+				"enablePullDownRefresh" : false,
+				"navigationBarBackgroundColor": "#005AE0",
+				"navigationBarTextStyle": "white" 
+			}
+		},
+		{
+			"path" : "pages/index3/index3",
+			"style" : 
+			{
+				"navigationBarTitleText" : "我的",
+				"enablePullDownRefresh" : false,
+				"navigationBarBackgroundColor": "#005AE0",
+				"navigationBarTextStyle": "white"
+				
+			}
+		},
+		{
+			"path" : "pages2/zhaoshangjia/zhaoshangjia",
+			"style" : 
+			{
+				"navigationBarTitleText" : "找商家",
+				"enablePullDownRefresh" : false,
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages2/company/company",
+			"style" : 
+			{
+				"navigationBarTitleText" : "公司详情",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages2/heatBrand/heatBrand",
+			"style" : 
+			{
+				"navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false,
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages2/industryNews/industryNews",
+			"style" : 
+			{
+				"navigationBarTitleText" : "行业咨询",
+				"enablePullDownRefresh" : false,
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages2/selExh/selExh",
+			"style" : 
+			{
+				"navigationBarTitleText" : "展会",
+				"enablePullDownRefresh" : false,
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages2/hallGuide/hallGuide",
+			"style" : 
+			{
+				"navigationBarTitleText" : "展馆导览",
+				"enablePullDownRefresh" : false,
+				"navigationBarBackgroundColor": "#005AE0",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path" : "pages2/goodList/goodList",
+			"style" : 
+			{
+				"navigationBarTitleText" : "商品列表",
+				"enablePullDownRefresh" : false,
+				"navigationBarBackgroundColor": "#005AE0",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path" : "pages2/companyList/companyList",
+			"style" : 
+			{
+				"navigationBarTitleText" : "展商名录",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages3/videoList/videoList",
+			"style" : 
+			{
+				"navigationBarTitleText" : "视频列表",
+				"enablePullDownRefresh" : false,
+				"navigationBarBackgroundColor": "#005AE0",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path" : "pages3/videoInfo/videoInfo",
+			"style" : 
+			{
+				"navigationBarTitleText" : "视频详情",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages3/myCollect/myCollect",
+			"style" : 
+			{
+				"navigationBarTitleText" : "我的收藏",
+				"enablePullDownRefresh" : false,
+				"navigationBarBackgroundColor": "#005AE0",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path" : "pages3/goodInfo/goodInfo",
+			"style" : 
+			{
+				"navigationBarTitleText" : "商品详情",
+				"enablePullDownRefresh" : false,
+				"navigationBarBackgroundColor": "#005AE0",
+				"navigationBarTextStyle": "white"  
+			}
+		},
+		{
+			"path" : "pages3/supplyDemand/supplyDemand",
+			"style" : 
+			{
+				"navigationBarTitleText" : "我发布的供求",
+				"enablePullDownRefresh" : false,
+				"navigationBarBackgroundColor": "#005AE0",
+				"navigationBarTextStyle": "white"  
+			}
+		},
+		{
+			"path" : "pages3/supplyDemandInfo/supplyDemandInfo",
+			"style" : 
+			{
+				"navigationBarTitleText" : "供求详情",
+				"enablePullDownRefresh" : false,
+				"navigationBarBackgroundColor": "#005AE0",
+				"navigationBarTextStyle": "white" 
+			}
+		},
+		{
+			"path" : "pages3/addGq/addGq",
+			"style" : 
+			{
+				"navigationBarTitleText" : "发布供求",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages3/userInfoUpdate/userInfoUpdate",
+			"style" : 
+			{
+				"navigationBarTitleText" : "个人信息",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages3/wenview/wenview",
+			"style" : 
+			{
+				"navigationBarTitleText" : "webview",
+				"enablePullDownRefresh" : false,
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages3/richview/richview",
+			"style" : 
+			{
+				"navigationBarTitleText" : "登记礼遇",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages3/servach/servach",
+			"style" : 
+			{
+				"navigationBarTitleText" : "搜索",
+				"enablePullDownRefresh" : false,
+		"navigationBarTextStyle": "white",
+				"navigationBarBackgroundColor": "#005AE0"
+			}
+		},
+		{
+			"path" : "pages3/gongqiu/gongqiu",
+			"style" : 
+			{
+				"navigationBarTitleText" : "最新供求",
+				"enablePullDownRefresh" : false
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {},
+	"tabBar": {
+		"color": "#909399",  
+		"selectedColor": "#0166FD",
+		"backgroundColor": "#FFFFFF",
+		"borderStyle": "black",
+		"list": 
+		[
+			{   
+				"pagePath": "pages/index/index",
+				"text": "首页",
+				"iconPath": "static/shouye2.png",
+				"selectedIconPath": "static/shouye1.png"
+			},    
+			{
+				"pagePath": "pages/index2/index2",
+				"text": "找商机",
+				"iconPath": "static/zhaoshangji2.png",
+				"selectedIconPath": "static/zhaoshangji1.png"
+			},   
+			{      
+				"pagePath": "pages/index3/index3",
+				"text": "我的",
+				"iconPath": "static/wode2.png",
+				"selectedIconPath": "static/wode1.png"
+			}    
+		]  
+	}  
+}

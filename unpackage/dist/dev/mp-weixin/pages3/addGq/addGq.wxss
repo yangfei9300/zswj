@@ -1,0 +1,10 @@
+.bentt{
+	width: 600rpx;
+	height: 90rpx;
+	background-color: #005AE0;
+	text-align: center;
+	line-height: 90rpx;
+	color: white;
+	border-radius: 15rpx;
+}
+

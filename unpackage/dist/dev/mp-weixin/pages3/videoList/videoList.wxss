@@ -1,0 +1,36 @@
+.topview {
+	width: 750rpx;
+	height: 220rpx;
+	background: linear-gradient(0deg, #005AE0, #0066FF);
+}
+.sousuoimg {
+	border-radius: 100rpx;
+}
+.bannerviwe {
+	width: 706rpx;
+	height: 386rpx;
+	margin: 0rpx 22rpx 0rpx 22rpx;
+	position: relative;
+	bottom: -0rpx;
+}
+.dozjovoew {
+	box-shadow: #c9c9c9 0px 0px 10rpx 5rpx;
+	margin: 25rpx;
+	border-radius: 15rpx;
+	padding: 30rpx 30rpx;
+}
+.gongsidizhi {
+	font-size: 40rpx;
+	font-weight: bold;
+}
+.videoimg {
+	width: 335rpx;
+	height: 465rpx;
+	border-radius: 15rpx 15rpx 0rpx 0rpx;
+}
+.videoview {
+	border-radius: 15rpx 15rpx 15rpx 15rpx;
+	box-shadow: #c9c9c9 0px 0px 10rpx 5rpx;
+	margin-bottom:30rpx;
+}
+

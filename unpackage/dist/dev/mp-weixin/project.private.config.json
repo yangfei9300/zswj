@@ -1,0 +1,90 @@
+{
+  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+  "projectname": "掌上五金",
+  "setting": {
+    "compileHotReLoad": true
+  },
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages3/gongqiu/gongqiu",
+          "pathName": "pages3/gongqiu/gongqiu",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages2/heatBrand/heatBrand",
+          "pathName": "pages2/heatBrand/heatBrand",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages3/myCollect/myCollect",
+          "pathName": "pages3/myCollect/myCollect",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages3/servach/servach",
+          "pathName": "pages3/servach/servach",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages3/myCollect/myCollect",
+          "pathName": "pages3/myCollect/myCollect",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages3/goodInfo/goodInfo",
+          "pathName": "pages3/goodInfo/goodInfo",
+          "query": "id=1",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages2/goodList/goodList",
+          "pathName": "pages2/goodList/goodList",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages3/addGq/addGq",
+          "pathName": "pages3/addGq/addGq",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages2/selExh/selExh",
+          "pathName": "pages2/selExh/selExh",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages3/userInfoUpdate/userInfoUpdate",
+          "pathName": "pages3/userInfoUpdate/userInfoUpdate",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/index3/index3",
+          "pathName": "pages/index3/index3",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "展馆导览",
+  "enablePullDownRefresh": false,
+  "navigationBarBackgroundColor": "#005AE0",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {}
+}

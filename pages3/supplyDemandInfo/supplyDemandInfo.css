@@ -1,0 +1,33 @@
+page{
+	background-color: white;
+}
+.stope{
+	background-color: #005AE0;
+	width: 750rpx;
+	height: 100rpx;
+}
+.yuanhus{
+	border-radius: 20rpx 20rpx 0rpx 0rpx;
+	margin-top: -30rpx;
+	z-index: 100;
+	background-color: white;
+	width: 750rpx;
+	min-height: 200rpx;
+	padding:50rpx 40rpx 30rpx 40rpx;
+}
+.shangdsstitle{
+	font-size: 45rpx;
+	font-weight: bold;
+}
+.heafidd{
+	width: 94rpx;
+	height: 94rpx;
+	border-radius: 50%;
+}
+.userinfoview{
+	
+		box-shadow: #c9c9c9 0px 0px 10rpx 5rpx;
+		background-color: white;
+		border-radius: 20rpx;
+		padding:50rpx 40rpx;
+}

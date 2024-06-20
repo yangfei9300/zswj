@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "webview",
+  "enablePullDownRefresh": false,
+  "navigationStyle": "custom",
+  "usingComponents": {}
+}

@@ -1,0 +1,33 @@
+
+.guanviwe {
+	width: 707rpx;
+	height: 155rpx;
+	box-shadow: #c9c9c9 0px 0px 10rpx 5rpx;
+	margin-left: 22rpx;
+	border-radius: 15rpx;
+}
+.guanimg {
+	width: 145rpx;
+	height: 55rpx;
+}
+.guanname{
+	font-size: 40rpx;
+	font-weight: bold;
+	color: #000000;
+}
+.guanname{
+	font-size: 30rpx;
+	font-weight: bold;
+	color: #000000;
+}
+.chaksas{
+	font-size: 30rpx;
+	font-weight: bold;
+	color: white;
+	height: 50rpx;
+	background-color: #005AE0;
+	border-radius: 100rpx;
+	padding:0rpx 40rpx;
+	line-height: 45rpx;
+}
+

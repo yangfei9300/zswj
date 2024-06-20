@@ -1,0 +1,61 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index2/index2",
+    "pages/index3/index3",
+    "pages2/zhaoshangjia/zhaoshangjia",
+    "pages2/company/company",
+    "pages2/heatBrand/heatBrand",
+    "pages2/industryNews/industryNews",
+    "pages2/selExh/selExh",
+    "pages2/hallGuide/hallGuide",
+    "pages2/goodList/goodList",
+    "pages2/companyList/companyList",
+    "pages3/videoList/videoList",
+    "pages3/videoInfo/videoInfo",
+    "pages3/myCollect/myCollect",
+    "pages3/goodInfo/goodInfo",
+    "pages3/supplyDemand/supplyDemand",
+    "pages3/supplyDemandInfo/supplyDemandInfo",
+    "pages3/addGq/addGq",
+    "pages3/userInfoUpdate/userInfoUpdate",
+    "pages3/wenview/wenview",
+    "pages3/richview/richview",
+    "pages3/servach/servach",
+    "pages3/gongqiu/gongqiu"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#909399",
+    "selectedColor": "#0166FD",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/shouye2.png",
+        "selectedIconPath": "static/shouye1.png"
+      },
+      {
+        "pagePath": "pages/index2/index2",
+        "text": "找商机",
+        "iconPath": "static/zhaoshangji2.png",
+        "selectedIconPath": "static/zhaoshangji1.png"
+      },
+      {
+        "pagePath": "pages/index3/index3",
+        "text": "我的",
+        "iconPath": "static/wode2.png",
+        "selectedIconPath": "static/wode1.png"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

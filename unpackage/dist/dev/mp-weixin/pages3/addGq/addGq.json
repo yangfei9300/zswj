@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "发布供求",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "biaofun-region": "/components/biaofun-region/biaofun-region"
+  }
+}

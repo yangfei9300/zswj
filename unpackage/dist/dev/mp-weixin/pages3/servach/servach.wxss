@@ -1,0 +1,90 @@
+.topviewww{
+	padding:20rpx 30rpx;background-color: #005AE0;
+	position: fixed;top: 0rpx;
+	left:0rpx;
+	width: 750rpx;
+}
+.button1{
+	width: 140rpx;
+	background-color: #ffffff;
+	height: 70rpx;
+	font-weight: bold;
+	border-radius: 15rpx;
+	text-align: center;
+	line-height: 70rpx;
+}
+.inputview{
+	padding:10rpx 20rpx;
+	background-color: white;
+}
+.gqview{
+	box-shadow: #c9c9c9 0px 0px 10rpx 5rpx;
+	background-color: white;
+	padding:30rpx 25rpx;
+	margin:20rpx 22rpx;
+	border-radius: 15rpx;
+}
+.sdgj{
+	font-size: 25rpx;
+	background-color:#F0F0F0;
+	font-size: 25rpx;
+	line-height: 40rpx;
+	padding:0rpx 10rpx;
+	border-radius: 10rpx;
+	margin-right: 15rpx;
+	margin-bottom: 15rpx;
+}
+.headerimg{
+	width: 70rpx;
+	height: 70rpx;
+	border-radius: 50%;
+	background-color: #005AE0;
+}
+.wenzi1{
+	color: #AAAAAA;
+}
+.sdgj{
+	font-size: 25rpx;
+	background-color:#F0F0F0;
+	font-size: 25rpx;
+	line-height: 40rpx;
+	padding:0rpx 10rpx;
+	border-radius: 10rpx;
+	margin-right: 15rpx;
+	margin-bottom: 15rpx;
+}
+.typetx{
+	opacity: 0.5;
+}
+/* 商品列表  */
+.sdgj {
+	font-size: 25rpx;
+	background-color: #F0F0F0;
+	font-size: 25rpx;
+	line-height: 40rpx;
+	padding: 0rpx 10rpx;
+	border-radius: 10rpx;
+	margin-right: 15rpx;
+	margin-bottom: 15rpx;
+}
+.dozjovoew {
+	box-shadow: #c9c9c9 0px 0px 10rpx 5rpx;
+	margin: 25rpx;
+	border-radius: 15rpx;
+	padding: 30rpx 30rpx;
+}
+.gongsidizhi {
+	font-size: 40rpx;
+	font-weight: bold;
+}
+.videoimg {
+	width: 345rpx;
+	height: 365rpx;
+	border-radius: 15rpx 15rpx 0rpx 0rpx;
+}
+.videoview {
+	border-radius: 15rpx 15rpx 15rpx 15rpx;
+	box-shadow: #c9c9c9 0px 0px 10rpx 5rpx;
+	margin-bottom:30rpx;
+}
+

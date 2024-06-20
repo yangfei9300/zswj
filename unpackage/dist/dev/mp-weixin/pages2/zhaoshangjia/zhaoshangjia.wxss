@@ -1,0 +1,66 @@
+.topview{
+	width: 750rpx;
+	height: 532rpx;
+	background: linear-gradient(0deg, #005AE0, #0066FF);
+	border-radius: 0rpx 0rpx 100rpx 100rpx;
+}
+.sousuoimg{
+	border-radius: 100rpx;
+}
+.bannerviwe{
+	width: 706rpx;
+	height: 386rpx;
+	margin:0rpx 22rpx 0rpx 22rpx;
+	position: relative;
+	bottom:-0rpx;
+}
+.swxnaview{
+	/* width: 100rpx; */
+	height: 10rpx;
+	border-radius: 100rpx;
+	background-color: #E4E4E4;
+}
+.sellans{
+	width: 30rpx;
+	border-radius: 100rpx;
+	height:10rpx;
+	background-color:  #005AE0;
+	border-radius: 100rpx;
+}
+.gqview{
+	box-shadow: #c9c9c9 0px 0px 10rpx 5rpx;
+	background-color: white;
+	padding:30rpx 25rpx;
+	margin:20rpx 22rpx;
+	border-radius: 15rpx;
+}
+.sdgj{
+	font-size: 25rpx;
+	background-color:#F0F0F0;
+	font-size: 25rpx;
+	line-height: 40rpx;
+	padding:0rpx 10rpx;
+	border-radius: 10rpx;
+	margin-right: 15rpx;
+	margin-bottom: 15rpx;
+}
+.headerimg{
+	width: 70rpx;
+	height: 70rpx;
+	border-radius: 50%;
+	background-color: #005AE0;
+}
+.wenzi1{
+	color: #AAAAAA;
+}
+.sdgj{
+	font-size: 25rpx;
+	background-color:#F0F0F0;
+	font-size: 25rpx;
+	line-height: 40rpx;
+	padding:0rpx 10rpx;
+	border-radius: 10rpx;
+	margin-right: 15rpx;
+	margin-bottom: 15rpx;
+}
+
