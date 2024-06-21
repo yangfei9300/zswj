@@ -258,6 +258,9 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
 var _default = {
   data: function data() {
     return {
@@ -266,36 +269,61 @@ var _default = {
       types: [],
       //分类
       swindex: 0,
-      supplyDemandList: [] //供求列表
+      supplyDemandList: [],
+      //供求列表
+      shopList: []
     };
   },
   onLoad: function onLoad() {
     this.getbanners();
     this.categorylist();
     this.getGongqiu();
+    this.getTjZhanshang();
   },
   methods: {
+    toshopinfo: function toshopinfo(item) {
+      uni.navigateTo({
+        url: '/pages2/company/company?id=' + item.id
+      });
+    },
+    getTjZhanshang: function getTjZhanshang() {
+      var _this = this;
+      var data1 = {};
+      this.$axios.axios('get', this.$paths.companylisttop, data1).then(function (res) {
+        if (res.code == 200) {
+          var commpanyList = res.rows;
+          for (var a = 0; a < commpanyList.length; a++) {
+            commpanyList[a].businessScope = commpanyList[a].businessScope.split(',');
+          }
+          _this.shopList = commpanyList;
+        } else {
+          _this.$tools.showToast(res.msg);
+        }
+      }).catch(function (err) {
+        console.log('错误回调', err);
+      });
+    },
     tosousuo: function tosousuo() {
       uni.navigateTo({
-        url: "/pages3/servach/servach"
+        url: '/pages3/servach/servach'
       });
     },
     // 获取最新的供求
     getGongqiu: function getGongqiu() {
-      var _this = this;
+      var _this2 = this;
       var data1 = {
-        'pageSize': 10,
-        'pageNum': 1
+        pageSize: 10,
+        pageNum: 1
       };
       this.$axios.axios('get', this.$paths.supplyNeedList, data1).then(function (res) {
         if (res.code == 200) {
           var supplyDemandList = res.rows;
           for (var a = 0; a < supplyDemandList.length; a++) {
             if (supplyDemandList[a].subCategory) {
-              supplyDemandList[a].subCategory = supplyDemandList[a].subCategory.split(",");
+              supplyDemandList[a].subCategory = supplyDemandList[a].subCategory.split(',');
             }
           }
-          _this.supplyDemandList = supplyDemandList;
+          _this2.supplyDemandList = supplyDemandList;
         }
       }).catch(function (err) {
         console.log('错误回调', err);
@@ -304,13 +332,13 @@ var _default = {
     swiperChange: function swiperChange(res) {
       this.swindex = res.detail.current;
     },
-    // 获取首页分类 
+    // 获取首页分类
     categorylist: function categorylist() {
-      var _this2 = this;
+      var _this3 = this;
       var data1 = {};
       this.$axios.axios('get', this.$paths.categorylist, data1).then(function (res) {
         if (res.code == 200) {
-          _this2.types = _this2.$tools.oneZhuanTwo(res.data, 5);
+          _this3.types = _this3.$tools.oneZhuanTwo(res.data, 5);
         }
       }).catch(function (err) {
         console.log('错误回调', err);
@@ -318,11 +346,11 @@ var _default = {
     },
     // 获取首页轮播图
     getbanners: function getbanners() {
-      var _this3 = this;
+      var _this4 = this;
       var data1 = {};
       this.$axios.axios('get', this.$paths.indexCarousellist, data1).then(function (res) {
         if (res.code == 200) {
-          _this3.banners = res.data;
+          _this4.banners = res.data;
         }
       }).catch(function (err) {
         console.log('错误回调', err);
@@ -331,23 +359,23 @@ var _default = {
     topage: function topage(type, index, index1) {
       if (type == 1) {
         uni.navigateTo({
-          url: "/pages2/zhaoshangjia/zhaoshangjia?index=" + index + "&index1=" + index1
+          url: '/pages2/zhaoshangjia/zhaoshangjia?index=' + index + '&index1=' + index1
         });
       } else if (type == 2) {
         uni.navigateTo({
-          url: "/pages2/industryNews/industryNews"
+          url: '/pages2/industryNews/industryNews'
         });
       } else if (type == 3) {
         uni.navigateTo({
-          url: "/pages2/heatBrand/heatBrand"
+          url: '/pages2/heatBrand/heatBrand'
         });
       } else if (type == 4) {
         uni.navigateTo({
-          url: "/pages2/selExh/selExh"
+          url: '/pages2/selExh/selExh'
         });
       } else if (type == 5) {
         uni.navigateTo({
-          url: "/pages3/supplyDemandInfo/supplyDemandInfo"
+          url: '/pages3/supplyDemandInfo/supplyDemandInfo'
         });
       }
     }

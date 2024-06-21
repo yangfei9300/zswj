@@ -34,10 +34,10 @@
 					<view class="w-10"></view>
 					<view class="fs-28">{{item.tel}}</view>
 					<view class="allline"></view>
-				</view>
+				</view>  
 			</view>
 			<view class="allline"></view>
-			<image src="/static/logocommend.png" class="w-128 h-128"></image>
+			<image :src="item.logo" class="w-128 h-128"></image>
 		</view>
 		<view class="h-50"></view>
 		<view class="roww center_center" v-if="goodList.length>0" style="font-weight: bold;">

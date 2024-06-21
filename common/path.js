@@ -57,11 +57,14 @@ const newsCarouselList =BASE_URL + '/news/newsCarousel/list'
 const dicttype =BASE_URL + '/dict/type/'
 // 获取资讯列表 /api/news/newsInfo/list
 const newsInfolist =BASE_URL + '/news/newsInfo/list'
+// 获取推荐的企业 /api/company/company/list/top
+const companylisttop =BASE_URL + '/company/company/list/top'
 
 
 
 
  export default {
+	 companylisttop,
 	 newsInfolist,
 	 dicttype,
 	 newsCarouselList,

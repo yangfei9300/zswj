@@ -10982,7 +10982,10 @@ var newsCarouselList = BASE_URL + '/news/newsCarousel/list';
 var dicttype = BASE_URL + '/dict/type/';
 // 获取资讯列表 /api/news/newsInfo/list
 var newsInfolist = BASE_URL + '/news/newsInfo/list';
+// 获取推荐的企业 /api/company/company/list/top
+var companylisttop = BASE_URL + '/company/company/list/top';
 var _default = {
+  companylisttop: companylisttop,
   newsInfolist: newsInfolist,
   dicttype: dicttype,
   newsCarouselList: newsCarouselList,

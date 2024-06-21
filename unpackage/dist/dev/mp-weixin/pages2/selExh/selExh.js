@@ -124,6 +124,21 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default = {
   data: function data() {
     return {
@@ -135,9 +150,12 @@ var _default = {
   },
   onLoad: function onLoad() {
     this.getExhList();
-    this.toTuijian();
   },
   methods: {
+    selIndexClick: function selIndexClick(index) {
+      this.selIndex = index;
+      this.toTuijian();
+    },
     toShops: function toShops() {
       uni.navigateTo({
         url: "/pages2/companyList/companyList?id=" + this.exhList[this.selIndex].id
@@ -168,11 +186,13 @@ var _default = {
     // 获取视频推荐
     toTuijian: function toTuijian() {
       var _this2 = this;
-      var data1 = {};
+      var data1 = {
+        'exhId': this.exhList[this.selIndex].id
+      };
       this.$axios.axios('get', this.$paths.exhVideoList, data1).then(function (res) {
         if (res.code == 200) {
           console.log("asd", res);
-          _this2.videoList = res.data;
+          _this2.videoList = res.rows;
         } else {
           _this2.$tools.showToast(res.msg);
         }
@@ -192,6 +212,7 @@ var _default = {
           }
           _this3.exhList = exhList;
           _this3.exhCarouselList();
+          _this3.toTuijian();
         } else {
           _this3.$tools.showToast(res.msg);
         }
@@ -372,6 +393,15 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+  var g0 = _vm.videoList.length
+  _vm.$mp.data = Object.assign(
+    {},
+    {
+      $root: {
+        g0: g0,
+      },
+    }
+  )
 }
 var recyclableRender = false
 var staticRenderFns = []

@@ -6,6 +6,9 @@
 .sousuoimg {
 	border-radius: 100rpx;
 }
+.selexhNo{
+	opacity: 0.7;
+}
 .bannerviwe {
 	width: 706rpx;
 	height: 386rpx;

@@ -29,8 +29,8 @@
 				<view class="colonn videoview"
 				v-for="(item,index) in 3"
 				>
-					<image src="../../static/lunbotu.png" 
-					mode="aspectFill" class="videoimg videoimgview"></image>
+					<!-- <image src="../../static/lunbotu.png" 
+					mode="aspectFill" class="videoimg videoimgview"></image> -->
 					<view class="w-335 txtShowLength"
 					style="padding: 5rpx 22rpx;text-align: left;font-weight: bold;"
 					>2024秋季全国五金交展商推荐</view>

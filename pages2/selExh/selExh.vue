@@ -16,6 +16,7 @@
 						<view class="roww">
 							<view class="fs-30 m-right-20" 
 							v-for="(item,index) in exhList"
+							@click.stop="selIndexClick(index)"
 							:class="{
 								'selexhNo': selIndex!=index
 							}"
@@ -29,15 +30,15 @@
 			</view>
 			<view class="roww rowsa" style="padding: 39rpx 32rpx">
 				<view class="colonn">
-					<image class="w-333 h-201" @click.stop="todengji" src="/static/guanzhongdnegjio.png"></image>
+					<image class="w-333 h-201" @click.stop="todengji" src="https://zswjapi.zsyflive.com/profile/guanzhongdnegjio.png"></image>
 					<view class="h-10"></view>
-					<image class="w-333 h-201" @click.stop="topage(3)" src="/static/zsmll.png"></image>
+					<image class="w-333 h-201" @click.stop="topage(3)" src="https://zswjapi.zsyflive.com/profile/zsmll.png"></image>
 				</view>
 				<view class="w-20"></view>
 				<view class="colonn rowsb">
-					<image @click.stop="topage(1)" src="/static/zhanguandaolan.png" class="w-334 h-126"></image>
-					<image @click.stop="topage(2)" src="/static/zhanguandaol.png" class="w-334 h-126"></image>
-					<image @click.stop="topage(6)" src="/static/dengjiliyu.png" class="w-334 h-126"></image>
+					<image @click.stop="topage(1)" src="https://zswjapi.zsyflive.com/profile/zhanguandaolan.png" class="w-334 h-126"></image>
+					<image @click.stop="topage(2)" src="https://zswjapi.zsyflive.com/profile/zhanguandaol.png" class="w-334 h-126"></image>
+					<image @click.stop="topage(6)" src="https://zswjapi.zsyflive.com/profile/dengjiliyu.png" class="w-334 h-126"></image>
 				</view>
 			</view>
 
@@ -48,7 +49,7 @@
 					<rich-text :nodes="exhList[selIndex].intro"></rich-text>
 				</view>
 			</view>
-
+			
 			<view class="colonn dozjovoew">
 				<view class="gongsidizhi">展馆地址</view>
 				<view class="h-24"></view>
@@ -67,10 +68,20 @@
 				</view>
 				<view class="h-25"></view>
 				<view class="huanhang rowsb">
-					<view class="colonn videoview" v-for="(item, index) in 3" @click.stop="topage(5)">
-						<image src="../../static/lunbotu.png" mode="aspectFill" class="videoimg videoimgview"></image>
-						<view class="w-335 txtShowLength" style="padding: 5rpx 22rpx; text-align: left; font-weight: bold">2024秋季全国五金交展商推荐</view>
-						<view class="h-13"></view>
+					<view class="colonn videoview" v-for="(item, index) in videoList">
+						<!--  @click.stop="topage(5)" -->
+						<channel-video  object-fit="cover"
+							 class="videoimg videoimgview"
+							:feed-id="item.feedId" 	
+							:finder-user-name="item.finderUserName">
+						</channel-video>  
+						<!-- <image src="../../static/lunbotu.png"
+						 mode="aspectFill" 
+						 class="videoimg videoimgview"></image> -->
+						
+						<view class="w-335 txtShowLength" 
+						style="padding: 5rpx 22rpx; text-align: left; font-weight: bold">{{item.name}}</view>
+						<!-- <view class="h-13"></view>
 						<view class="roww center_center">
 							<view class="w-10"></view>
 							<image src="/static/typename.png" class="w-30 h-30"></image>
@@ -83,9 +94,13 @@
 								<view class="fs-25 lh-24">5</view>
 							</view>
 							<view class="w-10"></view>
-						</view>
+						</view> -->
 						<view class="h-15"></view>
 					</view>
+					
+				</view>
+				<view class="roww m-top-30 center_center" v-if="videoList.length<=0">
+					<view>暂无视频信息</view>
 				</view>
 			</view>
 		</view>
@@ -104,10 +119,14 @@ export default {
 	},
 	onLoad() {
 		this.getExhList();
-		this.toTuijian();
+		
 		
 	},
 	methods: {
+		selIndexClick(index){
+			this.selIndex=index;
+			this.toTuijian()
+		},
 		toShops(){
 			uni.navigateTo({
 				url:"/pages2/companyList/companyList?id="+this.exhList[this.selIndex].id
@@ -139,13 +158,15 @@ export default {
 		},
 		// 获取视频推荐
 		toTuijian(){
-			var data1 = {};
+			var data1 = {
+				'exhId':this.exhList[this.selIndex].id
+			};
 			this.$axios
 				.axios('get', this.$paths.exhVideoList, data1)
 				.then((res) => {
 					if (res.code == 200) {
 						console.log("asd",res);
-						this.videoList=res.data;
+						this.videoList=res.rows;
 					} else {
 						this.$tools.showToast(res.msg);
 					}
@@ -154,6 +175,7 @@ export default {
 					console.log('错误回调', err);
 				});
 		},
+		
 		// 获取展会列表
 		getExhList() { 
 			var data1 = {};
@@ -167,6 +189,7 @@ export default {
 						}
 						this.exhList=exhList;
 						this.exhCarouselList();
+						this.toTuijian();
 					} else {
 						this.$tools.showToast(res.msg);
 					}

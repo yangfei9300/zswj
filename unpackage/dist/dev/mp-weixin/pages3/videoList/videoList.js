@@ -191,11 +191,65 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 var _default = {
   data: function data() {
-    return {};
+    return {
+      exhList: [],
+      videoList: [],
+      selIndex: 0
+    };
+  },
+  onLoad: function onLoad() {
+    this.getExhList();
   },
   methods: {
+    selIndexClick: function selIndexClick(index) {
+      this.selIndex = index;
+      this.toTuijian();
+    },
+    // 获取视频推荐
+    toTuijian: function toTuijian() {
+      var _this = this;
+      var data1 = {
+        'exhId': this.exhList[this.selIndex].id
+      };
+      this.$axios.axios('get', this.$paths.exhVideoList, data1).then(function (res) {
+        if (res.code == 200) {
+          console.log("asd", res);
+          _this.videoList = res.rows;
+        } else {
+          _this.$tools.showToast(res.msg);
+        }
+      }).catch(function (err) {
+        console.log('错误回调', err);
+      });
+    },
+    // 获取展会列表
+    getExhList: function getExhList() {
+      var _this2 = this;
+      var data1 = {};
+      this.$axios.axios('get', this.$paths.exhInfoList, data1).then(function (res) {
+        if (res.code == 200) {
+          var exhList = res.data;
+          for (var a = 0; a < exhList.length; a++) {
+            _this2.selIndex = 0;
+          }
+          _this2.exhList = exhList;
+          _this2.toTuijian();
+        } else {
+          _this2.$tools.showToast(res.msg);
+        }
+      }).catch(function (err) {
+        console.log('错误回调', err);
+      });
+    },
     toinfo: function toinfo(item) {
       uni.navigateTo({
         url: "/pages3/videoInfo/videoInfo"

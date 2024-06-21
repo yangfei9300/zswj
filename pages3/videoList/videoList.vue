@@ -6,8 +6,13 @@
 				<view class="w-20"></view>
 				<scroll-view scroll-x class="w-670">
 					<view class="roww">
-						<view class="fs-30 m-right-20">秋季全国五金商品交易会</view>
-						<view class="fs-30 m-right-20" >中国(西安)国际五金机电博览会</view>
+						<view class="fs-30 m-right-20" 
+						@click.stop="selIndexClick(index)"
+						v-for="(item,index) in exhList"
+						:class="{
+							'selexhNo': selIndex!=index
+						}"
+						>{{item.name}}</view>
 					</view>
 				</scroll-view>
 				<view class="w-15"></view>
@@ -19,16 +24,18 @@
 		
 		<view class="huanhang rowsb p-all-30">
 			<view class="colonn videoview"  
-			v-for="(item,index) in 3"
-			@click.stop="toinfo(item)"
+			v-for="(item,index) in videoList"
 			>
-				<image src="../../static/lunbotu.png" 
-				mode="aspectFill" class="videoimg videoimgview"></image>
+				<channel-video  object-fit="cover"
+					 class="videoimg videoimgview"
+					:feed-id="item.feedId" 	
+					:finder-user-name="item.finderUserName">
+				</channel-video>  
 				<view class="w-335 txtShowLength"
 				style="padding: 5rpx 22rpx;text-align: left;font-weight: bold;"
-				>2024秋季全国五金交展商推荐</view>
+				>{{item.name}}</view>
 				<view class="h-13"></view>
-				<view class="roww center_center">
+				<!-- <view class="roww center_center">
 					<view class="w-10"></view>
 					<image src="/static/typename.png" class="w-30 h-30"></image>
 					<view class="w-10"></view>
@@ -41,7 +48,7 @@
 					</view>
 					<view class="w-10"></view>
 				</view>
-				<view class="h-15"></view>
+				<view class="h-15"></view> -->
 			</view>
 		</view>
 		
@@ -52,10 +59,61 @@
 	export default {
 		data() {
 			return {
-
+	exhList: [],
+	videoList:[],
+	selIndex:0,
 			}
 		},
+		onLoad() {
+			this.getExhList();
+			
+			
+		},
 		methods: {
+			selIndexClick(index){
+				this.selIndex=index;
+			this.toTuijian()
+			},
+			// 获取视频推荐
+			toTuijian(){
+				var data1 = {
+					'exhId':this.exhList[this.selIndex].id
+				};
+				this.$axios
+					.axios('get', this.$paths.exhVideoList, data1)
+					.then((res) => {
+						if (res.code == 200) {
+							console.log("asd",res);
+							this.videoList=res.rows;
+						} else {
+							this.$tools.showToast(res.msg);
+						}
+					})
+					.catch((err) => {
+						console.log('错误回调', err);
+					});
+			},
+			// 获取展会列表
+			getExhList() { 
+				var data1 = {};
+				this.$axios
+					.axios('get', this.$paths.exhInfoList, data1)
+					.then((res) => {
+						if (res.code == 200) {
+							var exhList = res.data;
+							for(var a=0;a<exhList.length;a++){
+								this.selIndex=0;
+							}
+							this.exhList=exhList;
+							this.toTuijian();
+						} else {
+							this.$tools.showToast(res.msg);
+						}
+					})
+					.catch((err) => {
+						console.log('错误回调', err);
+					});
+			},
 			toinfo(item){
 				uni.navigateTo({
 					url:"/pages3/videoInfo/videoInfo"
