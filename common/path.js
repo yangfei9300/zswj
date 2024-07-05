@@ -59,11 +59,15 @@ const dicttype =BASE_URL + '/dict/type/'
 const newsInfolist =BASE_URL + '/news/newsInfo/list'
 // 获取推荐的企业 /api/company/company/list/top
 const companylisttop =BASE_URL + '/company/company/list/top'
+// 骗神
+const basicexamine =BASE_URL + '/basic/examine'
+
 
 
 
 
  export default {
+	 basicexamine,
 	 companylisttop,
 	 newsInfolist,
 	 dicttype,

@@ -158,6 +158,7 @@ var _default = {
     console.log("asd", richView);
     richView = this.$tools.formatRichText(richView);
     console.log("asd", richView);
+    richView = this.$tools.formatRichText(richView);
     this.richView = richView;
     console.log("asd", richView);
     this.$forceUpdate();

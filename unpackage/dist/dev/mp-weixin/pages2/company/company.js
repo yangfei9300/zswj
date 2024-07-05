@@ -363,6 +363,7 @@ var _default = {
           if (_this5.conmpanyInfo.image && _this5.conmpanyInfo.image != '') {
             _this5.conmpanyInfo.image = _this5.conmpanyInfo.image.split(",");
           }
+          _this5.conmpanyInfo.intro = _this5.$tools.formatRichText(_this5.conmpanyInfo.intro);
           _this5.getGoodList();
         } else {
           _this5.$tools.showToast(res.msg);

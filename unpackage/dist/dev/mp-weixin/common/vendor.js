@@ -10984,7 +10984,10 @@ var dicttype = BASE_URL + '/dict/type/';
 var newsInfolist = BASE_URL + '/news/newsInfo/list';
 // 获取推荐的企业 /api/company/company/list/top
 var companylisttop = BASE_URL + '/company/company/list/top';
+// 骗神
+var basicexamine = BASE_URL + '/basic/examine';
 var _default = {
+  basicexamine: basicexamine,
   companylisttop: companylisttop,
   newsInfolist: newsInfolist,
   dicttype: dicttype,

@@ -145,13 +145,27 @@ var _default = {
       exhList: [],
       selIndex: -1,
       videoList: [],
-      bannerss: [] //轮播图
+      bannerss: [],
+      //轮播图
+      isShi: false
     };
   },
   onLoad: function onLoad() {
     this.getExhList();
+    this.basicexamine();
   },
   methods: {
+    basicexamine: function basicexamine() {
+      var _this = this;
+      var data1 = {};
+      this.$axios.axios('get', this.$paths.basicexamine, data1).then(function (res) {
+        if (res.code == 200) {
+          _this.isShi = res.data;
+        } else {}
+      }).catch(function (err) {
+        console.log('错误回调', err);
+      });
+    },
     selIndexClick: function selIndexClick(index) {
       this.selIndex = index;
       this.toTuijian();
@@ -163,15 +177,15 @@ var _default = {
     },
     // 展会轮播图
     exhCarouselList: function exhCarouselList() {
-      var _this = this;
+      var _this2 = this;
       var data1 = {
         'exhId': this.exhList[this.selIndex].id
       };
       this.$axios.axios('get', this.$paths.exhCarouselList, data1).then(function (res) {
         if (res.code == 200) {
-          _this.bannerss = res.data;
+          _this2.bannerss = res.data;
         } else {
-          _this.$tools.showToast(res.msg);
+          _this2.$tools.showToast(res.msg);
         }
       }).catch(function (err) {
         console.log('错误回调', err);
@@ -185,16 +199,16 @@ var _default = {
     },
     // 获取视频推荐
     toTuijian: function toTuijian() {
-      var _this2 = this;
+      var _this3 = this;
       var data1 = {
         'exhId': this.exhList[this.selIndex].id
       };
       this.$axios.axios('get', this.$paths.exhVideoList, data1).then(function (res) {
         if (res.code == 200) {
           console.log("asd", res);
-          _this2.videoList = res.rows;
+          _this3.videoList = res.rows;
         } else {
-          _this2.$tools.showToast(res.msg);
+          _this3.$tools.showToast(res.msg);
         }
       }).catch(function (err) {
         console.log('错误回调', err);
@@ -202,19 +216,20 @@ var _default = {
     },
     // 获取展会列表
     getExhList: function getExhList() {
-      var _this3 = this;
+      var _this4 = this;
       var data1 = {};
       this.$axios.axios('get', this.$paths.exhInfoList, data1).then(function (res) {
         if (res.code == 200) {
           var exhList = res.data;
           for (var a = 0; a < exhList.length; a++) {
-            _this3.selIndex = 0;
+            _this4.selIndex = 0;
+            exhList[a].intro = _this4.$tools.formatRichText(exhList[a].intro);
           }
-          _this3.exhList = exhList;
-          _this3.exhCarouselList();
-          _this3.toTuijian();
+          _this4.exhList = exhList;
+          _this4.exhCarouselList();
+          _this4.toTuijian();
         } else {
-          _this3.$tools.showToast(res.msg);
+          _this4.$tools.showToast(res.msg);
         }
       }).catch(function (err) {
         console.log('错误回调', err);
@@ -393,7 +408,7 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  var g0 = _vm.videoList.length
+  var g0 = _vm.isShi ? _vm.videoList.length : null
   _vm.$mp.data = Object.assign(
     {},
     {

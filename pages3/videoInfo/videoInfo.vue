@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<view class="colonn">
+		<!-- <view class="colonn">
 			<video class="w-750 " style="height:800rpx;"></video>
 			<view class="colonn" style="padding:30rpx 40rpx;box-shadow: #c9c9c9 0px 0px 10rpx 5rpx;">
 				<view>2024秋季全国五金交易会  展商推荐</view>
@@ -29,8 +29,6 @@
 				<view class="colonn videoview"
 				v-for="(item,index) in 3"
 				>
-					<!-- <image src="../../static/lunbotu.png" 
-					mode="aspectFill" class="videoimg videoimgview"></image> -->
 					<view class="w-335 txtShowLength"
 					style="padding: 5rpx 22rpx;text-align: left;font-weight: bold;"
 					>2024秋季全国五金交展商推荐</view>
@@ -51,7 +49,7 @@
 					<view class="h-15"></view>
 				</view>
 			</view>
-		</view>
+		</view> -->
 		
 	</view>
 </template>

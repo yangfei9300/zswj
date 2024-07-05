@@ -73,7 +73,7 @@
 		v-if="imgType == 2">
 			<view style="font-weight: bold" class="fs-35">{{ item.name }}</view>
 			<view class="h-10"></view>
-			<view>{{ item.content }}</view>
+			<view> <rich-text :nodes="item.content"></rich-text></view>
 			<view class="h-20"></view>
 			<view class="huanhang">
 				<view class="sdgj" v-for="(item1, index1) in item.subCategory">{{ item1 }}</view>

@@ -104,7 +104,7 @@
 			"path" : "pages3/videoList/videoList",
 			"style" : 
 			{
-				"navigationBarTitleText" : "视频列表",
+				"navigationBarTitleText" : "",
 				"enablePullDownRefresh" : false,
 				"navigationBarBackgroundColor": "#005AE0",
 				"navigationBarTextStyle": "white"
@@ -114,7 +114,7 @@
 			"path" : "pages3/videoInfo/videoInfo",
 			"style" : 
 			{
-				"navigationBarTitleText" : "视频详情",
+				"navigationBarTitleText" : "",
 				"enablePullDownRefresh" : false
 			}
 		},

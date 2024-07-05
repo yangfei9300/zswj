@@ -60,7 +60,7 @@
 				</view>
 			</view>
 
-			<view class="colonn" style="padding: 30rpx 30rpx">
+			<view class="colonn" style="padding: 30rpx 30rpx" v-if="isShi">
 				<view class="roww" @click.stop="topage(4)">
 					<view>推荐视频</view>
 					<view class="allline"></view>
@@ -115,14 +115,31 @@ export default {
 			selIndex:-1,
 			videoList:[],
 			bannerss:[],//轮播图
+			isShi:false,
 		};
 	},
 	onLoad() {
 		this.getExhList();
-		
+		this.basicexamine();
 		
 	},
 	methods: {
+		basicexamine(){
+			var data1 = {
+			};
+			this.$axios
+				.axios('get', this.$paths.basicexamine, data1)
+				.then((res) => {
+					if (res.code == 200) {
+						this.isShi=res.data;
+					} else {
+						
+					}
+				})
+				.catch((err) => {
+					console.log('错误回调', err);
+				});
+		},
 		selIndexClick(index){
 			this.selIndex=index;
 			this.toTuijian()
@@ -186,6 +203,7 @@ export default {
 						var exhList = res.data;
 						for(var a=0;a<exhList.length;a++){
 							this.selIndex=0;
+							exhList[a].intro=this.$tools.formatRichText(exhList[a].intro);
 						}
 						this.exhList=exhList;
 						this.exhCarouselList();

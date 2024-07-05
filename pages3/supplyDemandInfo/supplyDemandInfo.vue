@@ -65,7 +65,9 @@
 			}
 		},
 		onLoad(options) {
-			this.xuqiuInfo=uni.getStorageSync("xuqiuInfo");
+			var xuqiuInfo=uni.getStorageSync("xuqiuInfo");
+			xuqiuInfo.content=this.$tools.formatRichText(xuqiuInfo.content)
+			this.xuqiuInfo=xuqiuInfo;
 			// this.options=options;
 			// this.getInfio();
 		},

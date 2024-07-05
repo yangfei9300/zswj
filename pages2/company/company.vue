@@ -239,6 +239,7 @@ export default {
 						if(this.conmpanyInfo.image&&this.conmpanyInfo.image!=''){
 							this.conmpanyInfo.image=this.conmpanyInfo.image.split(",");
 						}
+						this.conmpanyInfo.intro=this.$tools.formatRichText(this.conmpanyInfo.intro);
 						this.getGoodList();
 					} else {
 						this.$tools.showToast(res.msg);
